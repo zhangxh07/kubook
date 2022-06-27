@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	getService = "/api/v1/dynamic/bt_service?page_size=200&page_index="
+	getService = "/xxx/v1/xxx/xxx?page_size=200&page_index="
 )
 
 type BtInfoResponse struct {
@@ -65,7 +65,7 @@ func (c *CmdbClient) GetServices() []*BtData{
 
 // GetCmdb 获取服务列表
 func (c *CmdbClient) GetCmdb(s string,num int) ([]*BtData,bool){
-	url := fmt.Sprintf("https://cmdb.btpoc.com%s%d",getService,num)
+	url := fmt.Sprintf("https://cmdb.xxx.com%s%d",getService,num)
 	payload := strings.NewReader("payOrderNo=")
 	req , _ := http.NewRequest("GET",url,payload)
 	req.Header.Add("Content-Type","application/json; charset=utf-8")
